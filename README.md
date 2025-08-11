@@ -33,3 +33,41 @@
 - A Python virtual environment is an isolated, self-contained directory that houses a specific Python interpreter and its own set of installed packages and dependencies. 
 
 - It acts as a dedicated workspace for a single Python project, preventing conflicts and ensuring project-specific requirements are met without affecting other projects or the system-wide Python installation.
+
+### About Project Structure :
+
+- `manage.py` : A command-line utility that lets you interact with the Django project in various ways.
+
+- `mysite/` : A directory that is the actual Python package for your project. Its name is the Python package name you’ll need to use to import anything inside it (e.g. mysite.urls).
+
+- `mysite/__init__.py` : An empty file that tells Python interpreter, that this directory should be considered a Python package. If this file is deleted we cannot import modules from one package to another.
+
+- `mysite/settings.py` : Settings/configuration for this Django project.
+
+- `mysite/urls.py` : The URL(Universal Resource Locator) declarations for this Django project; a “table of contents” of your Django-powered site.
+
+- `mysite/asgi.py` : Asynchronous Server Gateway Interface is an entry-point for ASGI-compatible web servers to serve your project. Works similar to `wsgi.py` but comes with additional functionality.
+
+- `mysite/wsgi.py` : Web Server Gateway Interface file is used while deploying our application in production server. It's an entry-point for WSGI-compatible web servers to serve your project. A specification file that describes how the servers should interact with the web applications.
+
+### Important commands :
+
+- For creating a new app :
+```bash
+python manage.py startapp <app_name>
+```
+
+- For creating a super user :
+```bash
+python manage.py createsuperuser
+```
+
+- For changing the password :
+```bash
+python manage.py changepassword <your_user_name>
+```
+
+- For creating tables :
+```bash
+python manage.py makemigrations
+```
