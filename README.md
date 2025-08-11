@@ -71,3 +71,11 @@ python manage.py changepassword <your_user_name>
 ```bash
 python manage.py makemigrations
 ```
+
+### Working of Django
+
+- Django follows MVT(Model, View, Template) software design pattern.
+
+<img src="./public/Pic-1.png" />
+
+- The design pattern is the way of defining the rules of developing software application.
