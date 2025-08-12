@@ -79,3 +79,26 @@ python manage.py makemigrations
 <img src="./public/Pic-1.png" />
 
 - The design pattern is the way of defining the rules of developing software application.
+
+### Creating a project
+
+**Bootstrap a new Django project :**
+```bash
+django-admin startproject <project_name>
+```
+
+**To run the development server :**
+```bash
+python manage.py runserver
+```
+
+**To create an app :**
+```bash
+python manage.py startapp polls
+```
+
+### Projects vs. apps 
+
+- An app is a web application that does something – e.g., a blog system, a database of public records or a small poll app. 
+
+- A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
