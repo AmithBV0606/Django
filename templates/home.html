@@ -17,9 +17,9 @@
 
 <body>
     <div class="p-3 mb-2 container">
-        <div class="d-flex justify-content-center">
-            <img src="{% static 'images/django.png' %}" alt="" class="rounded-3" width="400">
-        </div>
+        <!-- <div class="d-flex justify-content-center">
+            <img src="{% static 'images/django.png' %}" alt="" class="rounded-3 width-8">
+        </div> -->
 
         <h1 class="py-4">Employee List</h1>
 
@@ -27,36 +27,26 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Phone Number</th>
                 </tr>
             </thead>
             <tbody>
+                {% for emp in employees %}
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ emp.first_name }} {{ emp.last_name }}</td>
+                    <td>{{ emp.designation }}</td>
+                    <td>{{ emp.phone_number }}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>@social</td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
 
-        {% for i in employees %}
+        <!-- {% for i in employees %}
         {{ i }}
-        {% endfor %}
+        {% endfor %} -->
     </div>
 </body>
 
