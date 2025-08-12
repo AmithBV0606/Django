@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(23, 23, 23);
+    color: white;
+}
+
+img {
+    height: 200px;
+    width: 300px;
+}
