@@ -50,23 +50,6 @@
 
 - `mysite/wsgi.py` : Web Server Gateway Interface file is used while deploying our application in production server. It's an entry-point for WSGI-compatible web servers to serve your project. A specification file that describes how the servers should interact with the web applications.
 
-### Important commands :
-
-- For creating a super user :
-```bash
-python manage.py createsuperuser
-```
-
-- For changing the password :
-```bash
-python manage.py changepassword <your_user_name>
-```
-
-- For creating tables :
-```bash
-python manage.py makemigrations
-```
-
 ### Working of Django
 
 - Django follows MVT(Model, View, Template) software design pattern.
@@ -92,13 +75,30 @@ python manage.py runserver
 python manage.py startapp <app_name>
 ```
 
-**To start migrations :**
-```bash
-python manage.py migrate
-```
-
-### Projects vs. apps 
+### NOTE : Projects vs apps 
 
 - An app is a web application that does something – e.g., a blog system, a database of public records or a small poll app. 
 
 - A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
+
+**To login to admin dashboard, create a super user and set the username and password :**
+```bash
+python manage.py createsuperuser
+```
+
+**For changing the password of super user :**
+```bash
+python manage.py changepassword <your_user_name>
+```
+
+### Database Migrations : 
+
+**Step 1 :** Reads the `models.py` file, looks for any changes and creates a migration file
+```bash
+python manage.py makemigrations
+```
+
+**Step 2 :** This will execute the SQL commands present in the migration file.
+```bash
+python manage.py migrate
+```
