@@ -102,3 +102,22 @@ python manage.py makemigrations
 ```bash
 python manage.py migrate
 ```
+
+### Media files :
+
+- Files uploaded by the user is called as the media files.
+
+- Add the following piece of code in `settings.py` :
+```py
+# Media files configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+```
+
+- `urls.py` :
+```py
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [...] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
