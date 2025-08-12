@@ -52,11 +52,6 @@
 
 ### Important commands :
 
-- For creating a new app :
-```bash
-python manage.py startapp <app_name>
-```
-
 - For creating a super user :
 ```bash
 python manage.py createsuperuser
@@ -94,7 +89,12 @@ python manage.py runserver
 
 **To create an app :**
 ```bash
-python manage.py startapp polls
+python manage.py startapp <app_name>
+```
+
+**To start migrations :**
+```bash
+python manage.py migrate
 ```
 
 ### Projects vs. apps 
